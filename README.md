@@ -27,9 +27,11 @@ Download standard repository and build standard Docker container image.
 
 Bash
 
-git clone https://github.com/YOUR_USERNAME/dice-roller-mcp.git
+git clone https://github.com/endikoci02/dice-roller-mcp.git
 cd dice-roller-mcp
 docker build -t dice-roller-mcp-server .
+
+
 Step 2: Register the Server
 You need to tell standard local Docker MCP installation about this new server.
 
@@ -55,14 +57,17 @@ registry:
       - name: roll_multiple
     metadata:
       category: utilities
+
+      
 Enable in Registry: Open standard registry.yaml file (located one folder up from standard catalogs folder) and add standard server under standard registry: key:
 
 YAML
 
 registry:
-  # ... other servers ...
   dice-roller:
     ref: ""
+
+    
 Step 3: Configure Claude Desktop
 Update your Claude Desktop configuration to use standard Docker Gateway.
 
@@ -96,6 +101,8 @@ JSON
   }
 }
 Restart Claude Desktop completely.
+
+##note for windows installation make sure to use // on the path 
 
 🔎 Verification & Testing
 You can test standard server without Claude by using standard Docker MCP CLI in your terminal:
