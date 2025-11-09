@@ -104,21 +104,20 @@ Restart Claude Desktop completely.
 
 ##note for windows installation make sure to use // on the path 
 
-🔎 Verification & Testing
-You can test standard server without Claude by using standard Docker MCP CLI in your terminal:
 
-1. Verify Registration
+Verify Registration
 
 Bash
 
 docker mcp server list
-# Output should include: dice-roller
-2. Test a Roll
 
-Bash
+# Test a Roll
+You can test standard server without Claude by using standard Docker MCP CLI in your terminal:
+
+Bash: 
 
 docker mcp call dice-roller roll_die '{"sides": "20"}'
-# Output: 🎲 Rolled a d20: 15
+Output: 🎲 Rolled a d20: 15
 
 ## Usage Examples
 
